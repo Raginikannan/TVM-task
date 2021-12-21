@@ -1,0 +1,84 @@
+<app-one></app-one>
+<hr>
+<h1> Pipe concept </h1>
+<u> <b>Date</b></u>
+<div> {{Day}}</div>
+<div> Date: {{Day | date}}</div><div> Date: {{ Day | date : 'M-d-y'}}</div>
+<u> <b>number pipe</b></u>
+<div> Number: {{ Number | number }} </div>
+<div> Number: {{ Number | number : "2.3-5" }}</div>
+<u><b> Percentage</b></u>
+<div> Per: {{Per | percent}}</div>
+<u> <b>currency</b> </u>
+<div>  Cur : {{ Cur | currency : "INR"}} </div>
+<u><b> Uppercase</b></u>
+<div> Uppercase: {{ 'welcome tvm' | uppercase}}</div>
+<u><b> lowercase</b></u>
+<div> lowercase: {{ 'WELCOME TVM' | lowercase}}</div>
+<u><b> titlecase</b></u>
+<div> titlecase: {{ 'welcome tvm' | titlecase}}</div>
+<u> <b>json</b></u>
+<div>  JSON: {{obj | json | uppercase}} {{arr}}</div>
+<u><b> slice</b></u>
+<div> Slice: {{arr | slice: 2}}</div>
+<u> <b>Keyvalue pair </b></u>
+<div> Key value pair : {{ obj | keyvalue | json}}</div>
+<div> <b>custom pipe : </b>{{ 'testing' | append}}</div> 
+
+
+  <hr>
+ {{taskService.count}} 
+<button (click)="increaseCount()"  >Increase</button>
+<br>
+<br>
+<app-comp1> </app-comp1>
+<br>
+<hr>
+
+ <h1> Attendance </h1>
+
+<div *ngIf="users">
+  <div *ngFor ="let user of users">
+    <div [ngSwitch]="user.Gen">
+      <div class="malebox" *ngSwitchCase="'m'">
+       {{user.name}} 
+      </div>
+      <div class="femalebox" *ngSwitchCase="'f'">
+        {{user.name}}
+       </div>
+       <div class="" *ngSwitchDefault>
+         {{user.name}}
+       </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+  <p>login works!</p>
+  <form>
+      <div [ngStyle]="{'background-color':'pink' }">
+      <div class="container">
+        <marquee width="100%"  direction ="right" height="100%"> 
+        <h1>Registration Form </h1> </marquee>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+    
+        <label ><b>Email</b></label>
+        <input type ="text"   placeholder="Enter your email" name="eamil" id="email" required>
+     <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <hr>
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    
+        <button type="submit"  class="registerbtn">Register</button>
+        </div>
+        </div>
+        </form>
+
+  
+

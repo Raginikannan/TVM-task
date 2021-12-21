@@ -1,0 +1,66 @@
+.femalebox{
+  background: #ff8000;
+  margin :10px;
+  width: 50%;
+  font-size: 23px;
+
+}
+
+.malebox{
+  background: #8080ff;
+  margin :8px; 
+  width: 50%;
+  font-size: 23px;
+}
+  
+  /* Add padding to containers */
+  .container {
+    padding: 60px;
+
+  }
+
+  /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /*  styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* style for the submit button */
+  .registerbtn {
+    color:black;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    transition-duration: 3s;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+transform: rotatex(90deg);
+    
+
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color:#f1f1f1;
+    text-align: center;
+  }
